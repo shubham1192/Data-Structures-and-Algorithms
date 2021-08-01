@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int arr[10],i,size,pos,num;
+    cout<<"Enter the size of array = ";
+    cin>>size;
+    for(i=0;i<size;i++)
+    {
+        cout<<"\narr" <<"["<<i<<"]" << "=" ; cin>>arr[i];
+    }
+    cout<<"\nTRAVERSAL"<<endl;
+
+    //OUTPUT
+
+    for(i=0;i<size;i++)
+    {
+        cout<<arr[i]<< " ";
+    }
+
+    cout<<"\nPosition at which you want to insert the number"<<endl;
+    cin>>pos;
+    cout<<"Enter number = "; cin>>num;
+
+    for(i=size-1;i>=pos-1;i--)
+    {
+        arr[i+1]=arr[i];
+    }
+    arr[pos-1]=num;
+    size++;
+
+    //OUTPUT
+
+    for(i=0;i<size;i++)
+    {
+        cout<<arr[i]<< " ";
+    }
+    return 0;
+}
